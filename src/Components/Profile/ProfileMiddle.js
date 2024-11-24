@@ -10,6 +10,7 @@ import "../Profile/ProfileMiddle.css"
 
 import moment from 'moment'
 import ProfileInputPost from './ProfileComponents/ProfileInputPost'
+import InputPost from '../Post/InputPost';
 
 const ProfileMiddle = ({following,
                         search,
@@ -30,7 +31,7 @@ const ProfileMiddle = ({following,
   )
   const [body,setBody] =useState("")
   const [importFile,setImportFile] =useState("")
-  
+  const [mapLink, setMapLink] = useState("");
  
 
   const handleSubmit =(e)=>{
@@ -51,13 +52,15 @@ const ProfileMiddle = ({following,
                img:img && (img.img),
                body:body,
                like:0,
-               comment:0
+               comment:0,
+               mapLink: mapLink,
               }
 
     const insert =[...userPostData,obj]
     setUserPostData(insert)
     setBody("")
     setImages(null)
+    setMapLink("");
   }
 
 
@@ -104,8 +107,9 @@ const ProfileMiddle = ({following,
         setImportFile ={setImportFile}
         images={images}
         setImages={setImages}
-        />
-        
+        mapLink={mapLink}
+        setMapLink={setMapLink}
+        />       
         <UserHome 
         modelDetails={modelDetails}
         profileImg={profileImg}

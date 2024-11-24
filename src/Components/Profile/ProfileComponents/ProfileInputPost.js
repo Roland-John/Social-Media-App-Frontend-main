@@ -13,7 +13,7 @@ const ProfileInputPost = ({handleSubmit,
                             images,
                             setImages,
                             profileImg,
-                            modelDetails
+                            modelDetails,
                         }) => {
   return (
     <div className="i-form">

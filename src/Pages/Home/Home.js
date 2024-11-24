@@ -106,7 +106,7 @@ const Home = ({setFriendsProfile}) => {
         
         
         const id =posts.length ? posts[posts.length -1].id +1 :1
-        const username="Vijay"
+        const username="User"
         const profilepicture=Profile
         const datetime=moment.utc(new Date(), 'yyyy/MM/dd kk:mm:ss').local().startOf('seconds').fromNow()
         const img =images ? {img:URL.createObjectURL(images)} : null

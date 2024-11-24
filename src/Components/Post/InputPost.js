@@ -12,7 +12,7 @@ const InputPost = ({handleSubmit,
                    setBody,
                    body,
                    images,
-                   setImages
+                   setImages,
                   }) => {
 
   return (
@@ -24,12 +24,15 @@ const InputPost = ({handleSubmit,
                 <input 
                 type="text" 
                 id="i-input" 
-                placeholder="What's in your mind Vijay?"
+                placeholder="What's in your mind User?"
                 required
                 value={body}
                 onChange={(e)=>setBody(e.target.value)}
                 />
             </div>
+            <div className="i-input-box">
+    
+    </div>
 
      <div className="file-upload">
       <div className="file-icons">
@@ -50,7 +53,7 @@ const InputPost = ({handleSubmit,
 
           <div className="pv-upload">
             <FaSmile className="input-svg" style={{fontSize:"30px",color:"red"}}/>
-            <span className='photo-dis'>Feelings/Activity</span>
+            <span className='photo-dis'>Location</span>
           </div>
       </div>
        
